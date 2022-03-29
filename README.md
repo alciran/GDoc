@@ -6,6 +6,10 @@
 # GDoc
 Gerador de arquivos HTML de documentação.
 
+## Desenvolvedor
+
+- **[Alciran Franco](https://github.com/alciran)** - \<18000223@uepg.br> - \<alciranfranco@gmail.com>
+
 
 ## Sobre o GDoc
 GDoc é uma ferramenta que apresenta uma estrutura de páginas de documentação pré definida, bastando apenas escrever e executar o script de compilação para gerar página de documentação. Os ganhos com a utilização dessa ferrramenta são:
