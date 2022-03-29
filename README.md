@@ -28,7 +28,7 @@ As páginas geradas são referentes ao projeto e seu(s) package(s). A página de
 | Diretório                          | Descrição                                             |
 |------------------------------------|-------------------------------------------------------|
 | {Projeto}                          | Diretório referente ao projeto criado.                |
-| {Projeto}/packages                 | Diretório que contém os packages do projeto           |
+| {Projeto}/packages                 | Diretório que contém os packages do projeto.          |
 | {Projeto}/public_gdocs             | Diretório para arquivos .gdoc público e componentes.  |
 | {Projeto}/packages/{Package}/gdocs | Diretório para armazenar os arquivos .gdoc do package.|
 | /public/help/dist                  | Diretório com arquivos e bibliotecas utilizadas para as páginas html. |
@@ -94,7 +94,7 @@ Ou para mais de um package:
 
     ./gdoc_compiler.sh package1,"package composto"
 
-## Outras opções dop compiler:
+## Outras opções do compiler:
 
 Para verificar apenas a saída do comando, e se etá tudo corretos com a estrutura dos arquivos gdoc de um package, pode utilizar a opção **--test** ou **-t** do binário compiler. Ao passar essa opção o(s) package(s) não é compilado, apenas retornar se a estrutura e sintaxe dos arquivos estão corretas.
 
