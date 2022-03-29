@@ -30,7 +30,7 @@ As páginas geradas são referentes ao projeto e seu(s) package(s). A página de
 | {Projeto}                          | Diretório referente ao projeto criado.                |
 | {Projeto}/packages                 | Diretório que contém os packages do projeto           |
 | {Projeto}/public_gdocs             | Diretório para arquivos .gdoc público e componentes.  |
-| {Projeto}/packages/{Package}/gdocs | Diretório para armazenar os arquivos .gdoc do projeto.|
+| {Projeto}/packages/{Package}/gdocs | Diretório para armazenar os arquivos .gdoc do package.|
 | /public/help/dist                  | Diretório com arquivos e bibliotecas utilizadas para as páginas html. |
 | /public/help/{Projeto}             | Diretório para armazenamento dos arquivos html referente ao projeto. |
 | /public/help/{Projeto}/packages    | Diretório para armazenamento dos arquivos html referente ao(s) package(s) de um projeto. |
@@ -41,7 +41,7 @@ Atualmente são dois binários, o **gdoc_manager.sh** referente a criação e re
 # Comandos
 
 ## Para o **gdoc_manager.sh**, os comandos devem ser executados a partir do diretório **GDoc**.
-Criar novo projeto:
+Criar novo projeto, basta executar o comando abaixo e preenher os dados como nome do projeto e owner (Done e responsável pelo projeto):
 
     ./gdoc_manager.sh --create-project ou ./gdoc_manager.sh -cpr
 
@@ -49,17 +49,23 @@ Criar um novo projeto dentro de uma estrutura de diretório
 
     ./gdoc_manager -cpr /diretorio/subdiretorio
 
-Remover um projeto
+Para remover um projeto, deve-se utilizar o seguinte comando passando caminho do diretótio do projeto a ser excluído:
 
-    ./gdoc_manager --remove-project ou ./gdoc_manager -rpr
+    ./gdoc_manager --remove-project /caminho/do/ptojeto ou ./gdoc_manager -rpr /caminho/do/ptojeto
 
-Criar novo package:
+Por exemplo, para remover o projeto Teste dentro do diretório projects:
 
-    ./gdoc_manager --create-package ou ./gdoc_manager -cpk
+    ./gdoc_manager --remove-projet projects/Teste    
 
-Remover um pacakge
+Para criar novo package, deve-se passar como parâmetro a localização do diretório do projeto. Após executar o comando abaixo, deve-se preenher os dados como nome do package e author (quem escreve a documentação). Por exemplo, para criar um novo package no projeto Teste:
+
+    ./gdoc_manager --create-package projects/Teste ou ./gdoc_manager -cpk projects/Teste
+
+Para remover um package,  deve-se passar como parâmetro a localização do diretório do package, por exemplo, para remove ro package **Package** do projeto Teste:
     
-    ./gdoc_manager --remove-package ou ./gdoc_manager -rpk
+    ./gdoc_manager --remove-package projects/Teste/packages/Package ou ./gdoc_manager -rpk projects/Teste/packages/Package
+
+Sempre após remover um package, é questionado se deseja-se compilar a projeto novamente. Como o package foi excluído, a paǵina html do projeto deve ser recompilada para remover o card com o link e as informações referente a ele. Caso queira recompilar o projeto, basta aceitar, se recusar o projeto não é compilado. Mas **Atenção**, ao não compilar durante a remoção, lembre-se de compilar novamente em algum momento depois para não ficar um card referente a um package não existente lá na página do projeto.
 
 ## Para o **gdoc_compiler.sh**, os comandos devem ser executados a partir do diretório do **Projeto**.
 Por exemplo, para compilar o projeto **Teste**, a partir do dirtório **GDoc**, primero deve-se ir até o diretório raiz do projeto:
