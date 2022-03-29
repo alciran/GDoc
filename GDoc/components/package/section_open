@@ -1,0 +1,4 @@
+    <!-- Inicio da section-->
+    <article class="docs-article" id="section-{{section_id}}">
+        <h3 class="docs-heading with-badge">{{session_name}} {{section_badge}} {{package_info}}</h3>         
+        <section class="docs-intro">        

@@ -1,0 +1,165 @@
+#!/bin/bash
+# Set up colors.
+ESeq="\x1b["
+ResetColor="$ESeq"'0m'
+Red="$ESeq"'0;31m'; Green="$ESeq"'0;32m'; Yellow="$ESeq"'0;33m'; Blue="\033[00;34m";
+
+#Mensagens de procedimentos
+header="[Gdoc]:"
+error="[${Red}Erro${ResetColor}]"
+ok="[${Green}Ok${ResetColor}]"
+warning="[${Yellow}Atenção${ResetColor}]" 
+
+#Mensagens Universais
+section_translate="Secção"
+subsection_translate="Subsecção"
+created_success="criado com sucesso."
+already_exist_dir="Já existe o diretório:"
+creating_new_directory="Criando novo diretório:"
+close_with_error="Saindo com erros."
+close_with_success="Operação finalizada com sucesso."
+remove_all_backup_files="Limpando os arquivos de backup gerados pelo script..."
+backup_files_deleted_successfully="Arquivos de backup deletados com sucesso!"
+empty_directory_backups="Diretório logs/backups vazio ou inexistente, nada foi deletado..."
+package_found="Package encontrado:"
+package_not_found="Package não encontrado:"
+open_in="Aberto na"
+line="linha"
+at="em"
+documentation="Documentação"
+created_in="Criado em"
+tag_name_unknow="Tag desconhecida"
+file_not_found="Arquivo não encontrado"
+tag_source_not_found="A tag 'src=' ou 'src_ext=' não foi encontrada em"
+
+#info page package
+doc_version_package="Versão: "
+name_author_package="Autor: "
+last_update_package="Última Atualização: "
+
+#GDoc_Create
+valid_arguments_for_script="Nenhum argumento foi passado para o comando!\nOs argumentos válidos são:\n --create-project ou -cpr [para criar novo projeto]\n --create-package ou -cpk [para criar um novo package]\n --remove-project ou -rpr [para remover um projeto]\n --remove-package ou -rpk [para remover um package]\n --help ou -h [exibir ajuda]"
+#Create_Project
+get_name_project="Nome do projeto:"
+get_ower_project="Owner:"
+creating_new_project="Criado novo projeto:"
+error_create_root_dir="Não foi possível criar o diretório raiz do projeto."
+error_create_project_conf_file="Não foi possível criar o arquivo project.conf"
+#Create_Package
+error_missing_file_project_config="Arquivo de configuração do projeto não encontrado."
+get_name_package="Nome do package: "
+get_author_package="Nome do autor: "
+creating_new_package="Criando novo package:"
+create_config_file_package="Arquivo de configuração do package"
+#Remove Project and Package
+argument_project_name_empty="Nome do projeto não informado."
+project_backup_not_save="Não foi possível realizar backup do Projeto:"
+project_removed_succesfully="Projeto removido com sucesso"
+argument_project_package_empty="Nome do projeto e/ou do package não informado."
+package_removed_succesfully="Package removido com sucesso"
+package_backup_not_save="Não foi possível realizar backup do Package:"
+recompile_project="Deseja recompilar agora o projeto? (y/n) :"
+please_reconpile_project="Recompile manualmente o projeto para remoção do package exclúido da página HTML"
+
+#GDoc compile
+compile_successfully="compilado com sucesso!"
+compile_not_possible="Não foi possível compilar"
+project_found="Projeto encontrado:"
+project_not_found="Projeto não encontrado:"
+error_compile_missing_packages_directory="Não foi encontrado o diretório 'packages' para o projeto:"
+compile_exit_zero_packages="Nenhum package encontrado neste projeto, saindo..."
+num_directory_packages_found="Total de packages encontrados: "
+running_with_test_option="[ Executando com a opção --test, não será realizado o processo de compilação ]"
+msg_try_compile_package="Tentando compilar o package no diretório: "
+package_conf_file_not_found="Arquivo de configuração do package não encontrado, saindo..."
+package_conf_file_found="Arquivo de configuração do package encontrado."
+project_name_missing_in_package_conf="Nome do projeto inexistente no arquivo de configuração, colocando nome padrão: 'Project Name'"
+package_name_missing_in_package_conf="Nome do package inexistente no arquivo de configuração, colocando nome padrão: 'Package Name'"
+package_colorTheme_missing_in_package_conf="Cor para tema não encontrado no arquivo de configuração, colocando padrão: 'purple'"
+package_colorTheme_unknow_in_package_conf="cor desconhecida, colocando cor padrão: 'purple'"
+dir_package_components_missing="FATAL ERROR => diretório GDoc/components/package não encontrado!"
+import_file_not_found="Arquivo de import não encontrado!"
+import_inside_import_file="tag de import dentro de um arquivo de import"
+structure_line_info_unknow="Estrutura da linha de informação inexistente ou desconhecida"
+structure_line_info="A estrutura correta da linha de informação: '@(tag=value)'"
+color_unknow_set_default="Cor/Tipo desconhecido, colocando padrão: 'primary'"
+badge_value_missing="A tag com nome do badge não foi encontrado."
+
+#image component
+unknow_value_from_image_size="Valor incorreto para 'grid_size=' em @img(), valores aceitos: '12','10','8','6','4','3'"
+tag_img_empty="Tag @img() vazia, nenhum atributo encontrado."
+
+#video component
+tag_video_empty="Tag @video() vazia, nenhum atributo encontrado."
+unknow_value_from_video_size="Valor incorreto para 'grid_size=' em @video(), valores aceitos: '12','6','4'"
+
+#section component
+tag_section_not_close="Tag de secção não foi fechada:"
+error_open_section_inside_section="Tag de nova secção inserida dentro de secção ainda em aberto"
+section_error_open="erro ao abrir secção"
+section_not_close="Secção ainda em aberto"
+error_close_section_not_exists="Erro ao fechar, não foi aberta nenhuma tag de secção"
+compile_close_section_found="Secção:"
+
+#subsection component
+tag_subsection_not_close="Tag de subsecção não foi fechada:"
+error_open_subsection_inside_subsection="Tag de nova subsecção inserida em subsecção ainda em aberto"
+subsection_error_open="erro ao abrir subsecção"
+subsection_not_close="Subsecção ainda em aberto"
+error_close_subsection_not_exists="Erro ao fechar, não foi aberta nenhuma tag de subsecção"
+compile_close_subsection_found="Subsecção:"
+
+#text component
+error_open_tag_text="Erro ao abrir tag de coponente text"
+already_exist_open_text_tag="Já existe uma tag text aberta e que não foi fechada"
+error_close_text_not_exists="Erro ao fechar, não foi aberta nenhuma tag de text"
+
+#sidebar component
+sidebar_buit_sucessfully="Sidebar construído com sucesso!"
+
+#callout component
+tag_callout_not_close="Tag de callout não foi fechada:"
+error_open_callout="Tag de callout inserida em callout ainda em aberto"
+callout_error_open="erro ao abrir callout"
+callout_not_close="Callout ainda em aberto"
+callout_type_unknow_set_default="Callout type desconhecido, colocando padrão: 'info'"
+error_close_callout_not_exists="Erro ao fechar, não foi aberta nenhuma tag de callout"
+compile_close_callout_found="Callout:"
+
+#footer component
+already_exists_footer="Já existe um componente footer para esse package"
+footer_buit_sucessfully="Footer:"
+
+#gallery component
+tag_gallery_not_close="Tag de gallery não foi fechada:"
+already_exist_gallery_tag_open="Já existe uma tag de galeria aberta"
+gallery_error_open="erro ao abrir gallery"
+gallery_not_close="Gallery ainda em aberto"
+error_close_gallery_not_exists="Erro a fechar, não foi aberta nenhuma tag gallery"
+unknow_value_from_gallery_columns="Valor incorreto para tag colums, possíveis valores: '2','3','4'"
+gallery_without_images="Não foi possível construir o componente gallery, nenhuma imagem foi adicionada com a tag @img_gallery"
+gallery_empty="Galeria vazia"
+compile_close_gallery="Gallery:"
+tag_img_gallery_empty="Tag @img_gallery() vazia, nenhum atributo encontrado."
+
+#code_block component
+tag_code_block_not_close="Tag de code block não foi fechada:"
+error_open_code_inside_code="Já existe uma tag de code aberta"
+code_block_error_open="erro ao abrir code block"
+code_block_not_close="Code block ainda em aberto"
+code_block_language_unknow="Valor da tag language desconhecida"
+available_languages_values="Languages disponíveis:"
+error_close_code_block_not_exists="Erro ao fechar, não foi aberta nenhuma tag de code block"
+compile_close_code_block="Code Block:"
+
+#informations
+total_section_built="Total de secções:"
+total_subsection_built="Total de subsecções:"
+total_callout_built="Total de callouts:"
+total_gallery_built="Total de gallery:"
+total_sc_gallery_built="Total de screenshot gallery:"
+total_code_block_built="Total de code block:"
+test_option_not_built="##### Opção --test ativa, nada foi compilado #####"
+
+#compile index project
+unknow_value_from_package_cards_columns="Valor desconhecido para colunas dos cards de package. Colocando padrão: 2"

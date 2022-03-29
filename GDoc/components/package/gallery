@@ -1,0 +1,4 @@
+              <div class="simplelightbox-gallery row mb-3">
+                 <h4 class="section-heading">{{gallery_name}}</h4>
+                {{gallery_images}}
+              </div><!--//gallery--> 

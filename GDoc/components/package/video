@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-{{video_grid_size}}">
+    <h4>{{video_title}}</h4>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item"
+        src="{{video_source}}" frameborder="0" autoload="false"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</div> 

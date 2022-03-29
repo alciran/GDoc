@@ -1,0 +1,3 @@
+<footer class="footer text-center">
+    <small class="copyright">{{project_name}} - Página de documentação <i class="fas fa-laptop-code"></i></small>
+</footer> 

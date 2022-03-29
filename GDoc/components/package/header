@@ -1,0 +1,22 @@
+<header class="header fixed-top header-resp">
+    <div class="branding docs-branding">
+        <div class="row justify-content-end">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">	
+                    <!-- Colorir item selecinado -->		
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <!-- fim colorir item selecinado -->       
+                </div><!--//docs-logo-wrapper-->
+                <div class="components-header">
+                    <div class="logo-icon"><img class="logo-icon-img" src="../../dist/img/package50.png"  width="35px" height="35px" alt="logo"></div>
+                    <a href="#section-1"><span class="page-title" title="Ir para página do package: {{package_name}}">&nbsp;&nbsp; {{package_name}} </span></a>
+                    <a href="../index.html"><span class="page-title" title="Ir para página do projeto: {{project_name}}">&nbsp;&nbsp;<{{color}}><u>[{{project_name}}]</u></{{color}}></span></a> 
+                </div>
+            </div><!--//container-->               
+        </div> 
+    </div><!--//branding-->
+</header><!--//header--> 

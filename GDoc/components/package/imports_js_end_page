@@ -1,0 +1,14 @@
+<!-- Page Specific JS -->
+  <!-- Javascript -->          
+  <script src="../../dist/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+  <script src="../../dist/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+  <script src="../../dist/js/docs.js"></script>
+
+
+  <!-- Main Javascript -->          
+  <script type="text/javascript" src="../../dist/plugins/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="../../dist/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../../dist/plugins/prism/prism.js"></script>
+  <script type="text/javascript" src="../../dist/plugins/lightbox/dist/ekko-lightbox.min.js"></script>      
+  <script type="text/javascript" src="../../dist/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                               
+  <script type="text/javascript" src="../../dist/js/main.js"></script>

@@ -1,0 +1,28 @@
+compile{    
+    s{
+        @( name=Introdução,icon=fas fa-home )
+        t{
+            Este é um exemplo de secção.
+        }t
+        #Pode-se adicionar html diretamente aqui dentro também
+        #Como um alert por exemplo!
+        <div class="alert alert-info" role="alert">This is a alert—check it out!</div>
+
+        # inicio da subsecção
+        ss{
+            @(name=Tags e Componentes, bdg_value=Novo, bdg_type=success)      
+            t{
+                Exemplo de subsecção. Na página de <a href="#">Teste</a> é possível verificar todas as opções diponíveis.
+                Existem componentes compilados, e também componentes que podem ser adiconados diretamente dentro do arquivo.
+            }t     
+            
+            cl{
+                @(name=Informações Importantes,icon=fa fa-info,type=info)
+                t{
+                    Bloco de nota com informação relevante
+                }t                
+            }cl               
+        }ss
+    }s    
+    import_public=footer.gdoc
+}compile

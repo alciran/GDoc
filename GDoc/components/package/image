@@ -1,0 +1,1 @@
+<div class="row"><h4>{{img_title}}</h4><img class="col-md-{{img_grid_size}} gdoc-image" src="{{img_source}}" alt="{{img_alt}}" /></div><br>

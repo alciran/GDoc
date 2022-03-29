@@ -1,0 +1,7 @@
+  <div id="docs-sidebar" class="docs-sidebar">		    
+    <nav id="docs-nav" class="docs-nav navbar">
+      <ul class="section-items list-unstyled nav flex-column pb-3">
+        {{sidebar_links}}     
+      </ul>
+    </nav><!--//docs-nav-->
+  </div><!--//docs-sidebar--> 

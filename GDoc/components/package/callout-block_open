@@ -1,0 +1,8 @@
+<div class="callout-block callout-{{callout_type}}">
+    <div class="content">
+        <h4 class="callout-title">
+            <span class="callout-icon-holder me-1">
+                <i class="{{callout_icon}}"></i>
+            </span><!--//icon-holder-->
+            {{callout_name}}
+        </h4>

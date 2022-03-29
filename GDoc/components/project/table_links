@@ -1,0 +1,8 @@
+ Package: {{package_name}}
+ <table class="table table-sm table-bordered">
+    <tr style="background-color: #CCC;">
+        <th class="col-2">Componente</th>
+        <th class="col-2">Name</th>
+        <th class="col-1">Open Link</th>
+        <th class="col-7">Link Laravel</th>
+    </tr> 

@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-6">
+        <h5>{{documentation}}</h5>
+    </div>
+    <div class="col-6 project-info">              
+        {{text_info_project}}
+    </div>
+    <hr>
+</div> 

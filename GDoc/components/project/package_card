@@ -1,0 +1,24 @@
+<div class="col-12 col-lg-{{num_columns_cards}} py-3">
+    <div class="card">
+        <div class="card-header card-header-{{colorTheme}}">
+        <h5 class="card-title mb-2">
+            <span class="theme-icon-holder card-icon-holder me-2 icon-{{colorTheme}}">
+            <i class="{{package_card_icon}}"></i>
+            </span>
+            <span class="card-title-text title-card-package">{{package_name}}</span>
+        </h5>
+        </div>
+
+        <div class="card-body card-project-{{colorTheme}}">
+        <div class="card-text">
+            <span>{{package_description}}
+            <hr>
+            {{package_info}}
+            </span>
+        </div>
+            <a class="card-link-mask" href="{{package_path_index_file}}"></a>
+        </div>
+        <!--//card-body-->
+    </div>
+    <!--//card-->
+</div><!--//col--> 

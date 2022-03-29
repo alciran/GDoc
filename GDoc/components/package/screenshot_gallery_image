@@ -1,0 +1,7 @@
+            <div class="col-md-{{columns}} col-sm-12 col-sm-12">
+              <h4>{{image_title}}</h4>
+              <div class="screenshot-holder col-md-12 mb-3">
+                <a href="{{image_path}}" data-title="{{image_title}}" data-toggle="lightbox"><img class="img-fluid" src="{{image_path}}" alt="{{image_alt}}" /></a>
+                <a class="mask" href="{{image_path}}" data-title="{{image_title}}" data-gallery="{{gallery_name}}" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+              </div>
+            </div> 

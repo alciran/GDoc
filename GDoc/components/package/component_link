@@ -1,0 +1,1 @@
+{{type}};{{component_name}};packages/{{package_link}};href="{{ asset('help/{{project_name}}/packages/{{laravel_link}}') }}" 

@@ -1,0 +1,29 @@
+<head>
+    <title>{{package_name}}</title>    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="GDoc - Package de documentação: {{package_name}}">
+    <meta name="author" content="{{author}}">    
+    <link rel="shortcut icon" href="../../dist/img/favicon.ico"> 
+    
+    <!-- Google Font -->	
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="../../dist/js/fontawesome_all.min.js"></script>
+
+    <!-- Color Theme Style -->
+    <link id="color-theme-style" rel="stylesheet" href="../../dist/css/themeColors/theme-{{color}}.css">
+    <!-- Global Style -->
+    <link id="color-theme-style" rel="stylesheet" href="../../dist/css/style.css">   
+
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="../../dist/plugins/prism/prism.css">
+    <link rel="stylesheet" href="../../dist/plugins/elegant_font/css/style.css">
+    <link rel="stylesheet" href="../../dist/plugins/simplelightbox/simple-lightbox.min.css"> <!--geleria de imagens-->
+    <link rel="stylesheet" href="../../dist/plugins/lightbox/dist/ekko-lightbox.css"> <!--geleria de imagens-->
+
+</head>  

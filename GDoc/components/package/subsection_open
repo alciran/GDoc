@@ -1,0 +1,2 @@
+          <section class="docs-section" id="subsection-{{subsection_id}}">
+            <h4 class="section-heading with-badge">{{subsession_name}} {{subsection_badge}}</h4>  

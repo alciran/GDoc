@@ -1,0 +1,1 @@
+<span class='badge badge-{{badge_type}}'>{{badge_name}}</span>

@@ -1,0 +1,11 @@
+<header class="header-resp header-project">
+    <div class="container-fluid position-relative py-2">
+      <div class="text-center">
+        <div class="site-logo">
+          <a class="navbar-brand"><img class="logo-icon me-1" src="../dist/img/logo_project.png"
+              alt="logo"></a>
+          <span class="project-title">{{project_name}}</span>
+        </div>
+      </div>
+    </div>
+  </header>

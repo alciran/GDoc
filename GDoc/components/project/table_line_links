@@ -1,0 +1,6 @@
+    <tr>
+        <td>{{component_link_type}}</td>
+        <td>{{component_link_name}}</td>
+        <td class="text-center"><a href="{{component_direct_link}}" target="_blank" ><i class="fas fa-external-link-alt"></i></a></td>
+        <td>{{component_laravel_link}}</td>
+    </tr> 
